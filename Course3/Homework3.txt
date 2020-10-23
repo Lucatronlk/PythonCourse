@@ -1,0 +1,26 @@
+Tema curs4: Exercitiu 1:
+list = [1, 10, 9, 8, 8, 7, 8, 11, 2, 7, 89, 8, 90,24, 8, 5]
+De cate ori apare numarul 8 in lista?
+Exercitiu 2:
+Generati primele 50 de numere in ordine descrescatoare
+Exercitiu 3
+list = ["a", "b", "c", "a", "d", "e", "b", "a"]
+Creati o noua lista care sa fie ca cea de mai sus dar fara litera a
+Exercitiu 4
+Generati toate numerele intre 123 si 231
+Exercitiu 5
+Generati toate numerele pare intre 500 si 560
+Exercitiu 6
+Generati toate numerele impare in ordine descrescatoare intre 999 si 901 
+Exercitiu 7
+Jucati o tura de piatra, foarfece, hartie cu user-ul
+Exercitiu 8
+Cereti user-ului sa introduca un numar intre 1 si 10. Daca nu respecta cerinta, printati un mesaj de eroare
+Exercitiu 9
+list = ["Timisoara", "Oradea", "Bucuresti", "Brasov", "Constanta", "Cluj"]
+Puneti prefixul "oras" la fiecare element din lista de mai sus
+Exercitiu 10
+list = [10, 99, 876, 23, -40, 78, -2000]
+Adunati toate numerele din lista de mai sus
+Exercitiu 11
+Intrebati-l pe user parola si ziceti daca e slaba, moderata sau puternica. Daca e sub 10 caractere e slaba, iar peste 20 puternica

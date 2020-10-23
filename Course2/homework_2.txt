@@ -1,0 +1,6 @@
+1. Generate & print the list of the first 500 odd numbers
+2. Generate & print the first 30 prime numbers
+3. Create a game in which the user must guess an animal. He has 20 tries
+4. Create a game in which the user must guess the type of a car. The program stops only when the user guesses
+5. Create a function which takes 2 ints and returns the greatest common divisor & the lowest common multiple. Make 5 tests for the function
+6. Make a dictionary with 10 key/values. The keys represent the name of a product & the value the price of the product. Create a function which returns the name of the product with the lowest price above 100.

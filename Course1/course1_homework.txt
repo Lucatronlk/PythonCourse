@@ -1,0 +1,35 @@
+
+Bool/comparison operators:
+  1. write 3 comparisons which are True
+  2. write 3 comparisons which are False
+  3. write a comparison in a function and call it 3 times with different parameters
+  4. check the functions output using if
+
+Operations with int/float:
+  1. Write a function which makes the sum of 3 ints
+  2. Write a function which computes 2 power to the specified variable 
+  3. Write a function which makes the sum of 4 floats
+  4. Write a function which makes diff of 2 floats & multiplies it with a int 
+  5. Write a function which computes how many apples go into a specified number of boxes
+  6. Check the functions output using if 
+
+Operations with strings:
+  0. Select the 5th letter of 3 Strings 
+  1. Make 3 substrings with only the first 6 chars of a String
+  2. Make 3 substrings with only the last 3 chars of a String
+  3. Make 3 substrings without the first 4 chars of a String
+  4. Put together 4 strings 
+  5. Show the same string 15 times 
+  6. Define functions for all the exercises above
+  7. Check the output of the functions with if
+
+Functions and ifs:
+  1. Calculate tax for a apartments based on space
+     a. 20mp => 100ron
+     b. 50mp => 300ron
+     c. 100mp => 500ron
+     d. 200mp => 2000ron
+  2. Calculate tax on a machine based on its engine
+  3. Check the functions output using if
+
+
