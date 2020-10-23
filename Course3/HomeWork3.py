@@ -17,8 +17,11 @@ list_2.sort(reverse=True)
     
 print(list_2)
 
-#3 Creati o noua lista care sa fie ca cea de mai sus dar fara litera a list = ["a", "b", "c", "a", "d", "e", "b", "a"] 
+#3 Creati o noua lista care sa fie ca cea de mai sus dar fara litera a 
 
-list_3=[]
+list_3=["a", "b", "c", "a", "d", "e", "b", "a"] 
 
+final_list = list(dict.fromkeys(list_3))
+final_list.remove("a")
 
+print(final_list)
