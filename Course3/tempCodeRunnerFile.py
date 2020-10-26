@@ -1,7 +1,12 @@
+print ('Create a new password')
+print ()
+password = str(input())
 
-list_3=["a", "b", "c", "a", "d", "e", "b", "a"] 
+def password(user_password):
 
-final_list = list(dict.fromkeys(list_3))
-final_list.remove("a")
-
-print(final_list)
+    if len(password) < 10:
+        print ("The password is wery week, you can consider changing it ")
+    elif len(password) < 20:
+        print ("The Password is moderate.....")
+    elif len(password) > 20:
+        print("Your password is strong, Good job")
