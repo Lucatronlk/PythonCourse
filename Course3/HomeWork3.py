@@ -8,6 +8,15 @@ list = [1, 10, 9, 8, 8, 7, 8, 11, 2, 7, 89, 8, 90,24, 8, 5]
 my_list = {i:list.count(i) for i in list}
 print(my_list)
 
+count = 0
+for number in list:
+    if number == 8:
+        count += 1 
+print(count)        
+
+print(list.count(8))
+
+
 #Generati primele 50 de numere in ordine descrescatoare
 
 list_2 = []
@@ -20,6 +29,14 @@ list_2.sort(reverse=True)
     
 print(list_2)
 
+
+i = 50
+list_t = []
+while len(list_t) < 50:
+    list.append(i)
+    i -= 1
+print(list)
+
 #3 Creati o noua lista care sa fie ca cea de mai sus dar fara litera a 
 
 list_3=["a", "b", "c", "a", "d", "e", "b", "a"] 
@@ -28,6 +45,14 @@ final_list = list(dict.fromkeys(list_3))
 final_list.remove("a")
 
 print(final_list)
+
+new_list = []
+for letter in list_3:
+    if letter != "a":
+        new_list.append(letter)
+
+print(new_list)
+
 
 
 #4 Generati toate numerele intre 123 si 231
@@ -75,7 +100,8 @@ list_rps = ['Piatra', 'Foarfeca', 'Hartie']
 print("Alege Piatra, Foarfeca sau Hartie")
 user_rps = str(input())
 
-computer = list_rps[randint(0, 2)]
+#computer = list_rps[randint(0, 2)]
+computer = list_rps(random.choice)
 
 #set player to False
 player = False
@@ -105,8 +131,22 @@ while player == False:
     
     #player was set to True, but we want it to be False so the loop continues
     player = False
-    computer = list_rps[randint(0,2)]
+    #computer = list_rps[randint(0,2)
+    computer = list_rps(random.choice)
 
+#oficial
+
+user_guess = input("piatra, foarcefa, hartie")
+computer_guess = "piatra"
+
+if user_guess == "piatra":
+    print("Egal")     
+elif user_guess == "foarfeca":
+    print("Ai pierdut")
+elif user_guess == "hartie":
+    print("Ai castigat")  
+
+    
 #8 Cereti user-ului sa introduca un numar intre 1 si 10. Daca nu respecta cerinta, printati un mesaj de eroare
 
 print ( "Introdu un numar intre 1 si 10 " )
@@ -117,6 +157,22 @@ if user_int.isdigit and user_int <= 10():
 else:
         print ( "Numarul nu este intre 1 si 10" ) 
     
+#oficial 
+
+user_number = input("Give me a number between 1 and 10 ")
+print(user_number)
+
+list_number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+is_user_input_right = False
+for element in list_number:
+    if user_number == element:
+        is_user_input_right = True
+        break
+
+if is_user_input_right:
+    print('Your number is correct')
+else:
+    print('Your number is not good')
 
 #9  Puneti prefixul "oras" la fiecare element din lista de mai sus
 
@@ -127,6 +183,13 @@ append_prex = "Oras "
 pre_res = [append_prex + sub for sub in list_oras]
 
 print(str(pre_res))
+
+#oficial
+
+list_oras2 = ["Timisoara", "Oradea", "Bucuresti", "Brasov", "Constanta", "Cluj"]
+new_list2 = []
+for element in list_oras2:
+    new_list2.append("Oras" + ())
 
 #10 Adunati toate numerele din lista de mai sus
 
@@ -150,3 +213,15 @@ def password(user_password):
         print ("The Password is moderate.....")
     elif len(password) >= 20:
         print("Your password is strong, Good job")
+
+        #oficial
+
+password_2 = input("Give me your password ")
+if len(password_2) < 10:
+    print("week")
+elif len(password) > 20:
+    print("strong")
+else:
+    print("medium")
+    
+            

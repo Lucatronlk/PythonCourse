@@ -1,12 +1,14 @@
-print ('Create a new password')
-print ()
-password = str(input())
+user_number = input("Give me a number between 1 and 10 ")
+print(user_number)
 
-def password(user_password):
+list_number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+is_user_input_right = False
+for element in list_number:
+    if user_number == element:
+        is_user_input_right = True
+        break
 
-    if len(password) < 10:
-        print ("The password is wery week, you can consider changing it ")
-    elif len(password) < 20:
-        print ("The Password is moderate.....")
-    elif len(password) > 20:
-        print("Your password is strong, Good job")
+if is_user_input_right:
+    print('Your number is correct')
+else:
+    print('Your number is not good')
