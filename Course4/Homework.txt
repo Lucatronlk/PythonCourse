@@ -1,0 +1,8 @@
+Exercitiu 1:
+Scrieti un program in python care aduna toate numerele pe care le da user-ul prin terminal
+Exercitiu 2:
+Scrieti un program in care user-ul trebuie sa introduca un numar intre 50 si 100. Daca introduce alt numar, printati "Your number is below 50" sau "Your number is above 100". Daca introduce litere, printati "You should enter a number"
+Exercitiu 3:
+Intr-un fisier definiti o functie care verifica daca un numar e par sau impar. In alt fisier, verificati un numar dat de user daca e sau nu par folosind functia definita in celalalt fisier.
+Exercitiu 4:
+Creati un joc in care user-ul trebuie sa ghiceasca un numar intre 1 si 10. La fiecare input al user-ului ziceti numarul ales de calculator (folositi random.choice). Jocul se opreste doar cand user-ul tasteaza "STOP"
