@@ -1,9 +1,25 @@
-print("Va rog introduceti un nr intre 50 si 100")
-user_numb = input()
+list_num = []
+i = 0
 
-if user_numb < 50:
-    print("Your number is bellow 50")
-elif user_numb > 100:
-    print ("Your number is above 100")    
-elif user_numb.isalpha():
-    print("You should enter a number")
+while i < 10:
+    list_num.append(i)
+    i+=1
+
+import random
+# print ("Ghiceste numarul intre 0 si 10 ")
+# guess_num = input()
+# number = random.choice(list_num)
+
+#guess_num = int(guess_num)
+
+while True:
+    guess_num = input("Give a number between 1 and 10: ")
+    number = random.choice(list_num)
+    if guess_num == number:
+        print ("Felicitari ai ghicit numarul")
+        break
+    elif guess_num == "STOP":
+        print("GAME OVER")
+        break
+    elif guess_num != number:
+        print (" Din pacate nu ai ghicit numberu " + "Numarul a fost " + str(number))
