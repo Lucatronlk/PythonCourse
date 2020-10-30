@@ -30,28 +30,28 @@ list3 = [1, 2, "a", 34, "bgh", "#"]
     
 #    a. eliminate all elements from list3
 
-# #list3.clear()
-# print(list3)
+list3.clear()
+print(list3)
 
-# #    b. eliminate all 3 from list1
+#    b. eliminate all 3 from list1
 
-# #list1.remove(3)
-# #list1.remove(33)
-# print(list1)
+list1.remove(3)
+list1.remove(33)
+print(list1)
 
 # #    c. sort list1 from the biggest number to the lowest
 
-# list1.sort(reverse=True)
-# print(list1)
+list1.sort(reverse=True)
+print(list1)
 
 # #    d. sort list2 without "Zz"
-# list2.pop()
-# print(list2)
+list2.pop()
+print(list2)
 
 # #    e. make list3 in the recverse order
 
-# list3.reverse()
-# print(list3)
+list3.reverse()
+print(list3)
 #    f. eliminate last 3 elements from list 2, last element from list3 and last 2 elements from list1
 
 n = 3
