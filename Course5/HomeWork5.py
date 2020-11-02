@@ -95,3 +95,74 @@ print(dict1)
 dict1.clear()
 
 print(dict1)
+
+
+# 5. Make a "piatra, foarfece, hartie" game. 
+#    If the user types 'stop', even with whitespaces or some uppercase letters, the game stops.
+#    The user needs to input "piatra", "foarfece" or "hartie". 
+#    If he writes something else, inform him on the rules of the game.
+#    Accept the user's input even if it has whitespaces or some letters are uppercase.
+
+print("Alegeti una din urmatoarele: Piatra, Foarfeca, Hartie")
+# user_guess = input()
+# user_guess = user_guess.lower()
+# user_guess = user_guess.strip()
+# computer_guess = "piatra"
+
+while True:
+    user_guess = input()
+    user_guess = user_guess.lower()
+    user_guess = user_guess.strip()
+    computer_guess = "piatra"
+    if user_guess == "piatra":
+        print("Egal")
+        break
+    elif user_guess == "foarfeca":
+        print("Ai pierdut")
+        break
+    elif user_guess == "hartie":
+        print("Ai castigat")
+        break
+    elif user_guess == "stop":
+        print("Game over")
+        break
+    elif user_guess != "hartie" and user_guess != "foarfeca" and user_guess != "piatra":
+        print("Please choose: Piatra, Foarfeca or Hartie")
+        
+
+
+
+# 6. Make a game in which the user has to guess a number between 100 and 199.
+#    If the user types 'stop', even with whitespaces or some uppercase letters, the game stops.
+#    If the user's number is not between 100 and 199, inform him.
+#    If the user does not enter a number, inform him.
+
+
+
+import random 
+list_num = []
+i = 100
+
+while i <= 199:
+    list_num.append(i)
+    i+=1
+
+print(list_num)
+print("Choose a number between 100-109")
+
+
+while True: 
+    guess_num = input("Give a number between 100 and 199: ")
+    guess_num = guess_num.strip()
+    guess_num = guess_num.upper()
+    number = random.choice(list_num)
+    if guess_num == number:
+        print ("Felicitari ai ghicit numarul")
+        break
+    elif guess_num == "STOP":
+        print("GAME OVER")
+        break
+    elif int(guess_num) < 100 or int(guess_num) > 199:
+        print("Numarul ales nu este intre 100 si 199")
+    elif guess_num != number:
+        print (" Din pacate nu ai ghicit numberu " + "Numarul a fost " + str(number))
