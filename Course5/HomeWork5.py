@@ -1,16 +1,56 @@
 #1   Are the following if statements True or False:
 #    a. if True and False: --> FALSE
+if True and False:
+    print("it is false'")
+else:
+    print('we are in else')
+
 #    b. if False or True: --> TRUE
+if False or True: 
+    print('this will always be true')
+else:
+    print('nu o sa ajunga niciodata')
+
+
 #    c. if 10 >= 10 and 67 > 66: --> TRUE
+
+x = 10 >= 10 and 67 > 66 
+print('ex c = ')
+print(x)
+
 #    d. if 10 < 10 and 10 >= 9: --> FALSE
-#    e. if -1 < -2 or -2 > -1: --> TRUE
+d = 10 < 10 and 10 >= 9
+print(d)
+
+#    e. if -1 < -2 or -2 > -1: --> FALSE
+
+e = -1 < -2 or -2 > -1
+print(e)
+
 #    f. if True or False and True: --> TRUE
-#    g. if True and False or False and True: --> TRUE
+
+f = True or False and True
+print(f)
+
+#    g. if True and False or False and True: --> FALSE
+
+g = True and False or False and True
+print(g)
+
 #    h. if not True and not False: --> FALSE
+
+h = not True and not False
+print(h)
+
 #    i. if not True or True: --> TRUE
+ 
+i = not True or True
+print(i)
+
 #    j. if False and not False: --> FALSE
 
-
+j = False and not False
+print(j)
 
 #2. What values should x,y have so the following if statements are True? What about False?
 #    a. if x > 6 and x < 12:  -->  TRUE: 7 > 6 and 7 < 12   | FALSE: 6 > 6 and 11 < 12
@@ -166,3 +206,6 @@ while True:
         print("Numarul ales nu este intre 100 si 199")
     elif guess_num != number:
         print (" Din pacate nu ai ghicit numberu " + "Numarul a fost " + str(number))
+
+
+
