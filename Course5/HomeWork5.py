@@ -236,10 +236,6 @@ print(dict1)
 #    Accept the user's input even if it has whitespaces or some letters are uppercase.
 
 print("Alegeti una din urmatoarele: Piatra, Foarfeca, Hartie")
-# user_guess = input()
-# user_guess = user_guess.lower()
-# user_guess = user_guess.strip()
-# computer_guess = "piatra"
 
 while True:
     user_guess = input()
@@ -298,6 +294,30 @@ while True:
         print("Numarul ales nu este intre 100 si 199")
     elif guess_num != number:
         print (" Din pacate nu ai ghicit numberu " + "Numarul a fost " + str(number))
+    else:
+        print('Va rog alegeti un numar')
 
+# Rezolvare Roberto
+list = []
+i = 100
+while i < 199:
+  list.append(i)
+  i += 1
+
+import random
+computer_guess = random.choice(list)
+
+x = input('Guess a number between 100 and 199\n')
+if x.isdigit():
+  int_x = int(x)
+  if int_x > 100 and int_x < 199:
+    if computer_guess == x:
+      print('you won')
+    else:
+      print('you lost, computer chose ' + str(computer_guess))
+  else:
+    print('please give a number beween 100 and 199')
+else:
+  print('please give a number')
 
 
