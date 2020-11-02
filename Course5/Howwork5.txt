@@ -1,0 +1,47 @@
+1. Are the following if statements True or False:
+    a. if True and False:
+    b. if False or True:
+    c. if 10 >= 10 and 67 > 66:
+    d. if 10 < 10 and 10 >= 9:
+    e. if -1 < -2 or -2 > -1
+    f. if True or False and True:
+    g. if True and False or False and True:
+    h. if not True and not False:
+    i. if not True or True:
+    j. if False and not False:
+2. What values should x,y have so the following if statements are True? What about False?
+    a. if x > 6 and x < 12:
+    b. if x > 10 or y > 10:
+    c. if x < 9 or True:
+    d. if y > 99 and False:
+    e. if x > 10 and x < 10:
+    f. if not x:
+    g. if x > 10 or x < 10:
+    h. if x > 12 and x < 18 or y > 4 and not y < 89:
+3. Exercises with lists
+    list1 = [1, 3, 45, -7, 89, 1, 12, 33, 1]
+    list2 = ["a", "cd", "b", "b", "f", "oj", "Zz"]
+    list3 = [1, 2, "a", 34, "bgh", "#"]
+    a. eliminate all elements from list3
+    b. eliminate all 3 from list1
+    c. sort list1 from the biggest number to the lowest
+    d. sort list2 without "Zz"
+    e. make list3 in the recverse order
+    f. eliminate last 3 elements from list 2, last element from list3 and last 2 elements from list1
+    g. how many "b" values are in list2
+4. Exercises with dictionaries
+    dict1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 'A'}
+    a. remove last element
+    b. print all keys for the values above 2
+    c. remove all keys for the values above 2
+    d. print all the values remaining
+    e. remove all remaining elements from dict
+5. Make a "piatra, foarfece, hartie" game. 
+   If the user types 'stop', even with whitespaces or some uppercase letters, the game stops.
+   The user needs to input "piatra", "foarfece" or "hartie". 
+   If he writes something else, inform him on the rules of the game.
+   Accept the user's input even if it has whitespaces or some letters are uppercase.
+6. Make a game in which the user has to guess a number between 100 and 199.
+   If the user types 'stop', even with whitespaces or some uppercase letters, the game stops.
+   If the user's number is not between 100 and 199, inform him.
+   If the user does not enter a number, inform him.

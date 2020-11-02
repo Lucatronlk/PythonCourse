@@ -20,7 +20,7 @@ Exercitiu 9
 list = ["Timisoara", "Oradea", "Bucuresti", "Brasov", "Constanta", "Cluj"]
 Puneti prefixul "oras" la fiecare element din lista de mai sus
 Exercitiu 10
-list = [10, 99, 876, 23, -40, 78, -2000]
+
 Adunati toate numerele din lista de mai sus
 Exercitiu 11
 Intrebati-l pe user parola si ziceti daca e slaba, moderata sau puternica. Daca e sub 10 caractere e slaba, iar peste 20 puternica
