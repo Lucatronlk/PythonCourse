@@ -53,14 +53,80 @@ j = False and not False
 print(j)
 
 #2. What values should x,y have so the following if statements are True? What about False?
-#    a. if x > 6 and x < 12:  -->  TRUE: 7 > 6 and 7 < 12   | FALSE: 6 > 6 and 11 < 12
+#    a. if x > 6 and x < 12:  -->  TRUE: 7 > 6 and 7 < 12   | FALSE: 13 > 6 and 13 < 12
+
+x = 7
+a = x > 6 and x < 12
+print(a)
+
+x = 13
+a = x > 6 and x < 12
+print(a)
+
 #    b. if x > 10 or y > 10:  -->  TRUE: 11 > 10 or 9 > 10  | FALSE: 9 > 10 or 8 > 10
+
+x=11
+y=9
+b = x > 10 or y > 10
+print(b)
+
+x=9
+y=8
+b = x > 10 or y > 10
+print(b)
+
 #    c. if x < 9 or True:     -->  TRUE: 9 < 9 or True      | FALSE: Cannot be false because one value is true 
+
+x = 9 
+c = x < 9 or True
+print(c)
+
 #    d. if y > 99 and False:  -->  TRUE: Cannot be true     | FALSE: 99 > 99 and False 
-#    e. if x > 10 and x < 10: -->  TRUE: 11 > 10 and 9 < 10 | FALSE:  9 > 10 and 9 < 10
+
+y = 99
+d = y > 99 and False
+print(d)
+
+#    e. if x > 10 and x < 10: -->  TRUE: cannot be true | FALSE:  9 > 10 and 9 < 10
+
+x = 9
+e = x > 10 and x < 10
+print(e)
+
 #    f. if not x:             -->  TRUE not False           | FALSE: not True
+
+x = False
+f = not x
+print(f)
+
+x = True
+f = not x
+print(f)
+
 #    g. if x > 10 or x < 10:  -->  TRUE 11 > 10 or 10 < 10  | FALSE 10 > 10 or 10 < 10
+
+x = 11
+g = x > 10 or x < 10
+print(g)
+
+x = 10
+g = x > 10 or x < 10
+print(g)
+
+
 #    h. if x > 12 and x < 18 or y > 4 and not y < 89:  -->    TRUE:  13 > 12 and 13 < 18 or 90 > 4 and not 90 < 89 | FALSE: 11 > 12 and 11 < 18 or 3 > 4 and 3 < 89
+
+
+x = 13
+y = 90
+h = x > 12 and x < 18 or y > 4 and not y < 89
+print(h)
+
+
+x = 11
+y = 3
+h = x > 12 and x < 18 or y > 4 and not y < 89
+print(h)
 
 
 #3 Exercises with lists
