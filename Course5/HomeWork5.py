@@ -130,7 +130,7 @@ print(h)
 
 
 #3 Exercises with lists
-list1 = [1, 3, 45, -7, 89, 1, 12, 33, 1]
+list1 = [1, 3, 45, -7, 89, 1, 12, 3, 3, 1]
 list2 = ["a", "cd", "b", "b", "f", "oj", "Zz"]
 list3 = [1, 2, "a", 34, "bgh", "#"]
     
@@ -141,8 +141,9 @@ print(list3)
 
 #    b. eliminate all 3 from list1
 
-list1.remove(3)
-list1.remove(33)
+#list1.remove(3)
+while 3 in list1:
+    list1.remove(3)
 print(list1)
 
 # #    c. sort list1 from the biggest number to the lowest
@@ -152,6 +153,7 @@ print(list1)
 
 # #    d. sort list2 without "Zz"
 list2.pop()
+list2.sort()
 print(list2)
 
 # #    e. make list3 in the recverse order
@@ -173,6 +175,22 @@ m = 2
 res_2 = list1[: len(list1) - m ]
 print(res_2)
 
+
+
+i = 3 
+print(list2)
+while i > 0:
+    list2.pop()
+    i -=1
+print(list2)
+
+list1 = list[:-2] # scoate ultimele 3
+
+
+#g how many b values are in list 
+
+print(list2.count('b'))
+
 #4. Exercises with dictionaries
 dict1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 'A'}
 #    a. remove last element
@@ -188,13 +206,21 @@ for key, value in dict1.items():
 
 #    c. remove all keys for the values above 2
 
+keys_to_be_removed = []
+for key, value in dict1.items():
+    if value > 2:
+        keys_to_be_removed.append(key)
+
+for key in keys_to_be_removed:
+    dict1.pop(key)
+print(dict1)    
 
 dict1 = {key : val for key, val in dict1.items() if not (isinstance(val, int) and (val > 2))}
 print(dict1)
 
 #    d. print all the values remaining
 
-print(dict1)
+print(dict1.values())
 #    e. remove all remaining elements from dict
 
 
