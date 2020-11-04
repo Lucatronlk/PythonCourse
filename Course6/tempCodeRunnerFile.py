@@ -1,9 +1,11 @@
-CARS = ["audi","bmw","hyundai","dacia"]
-STATUS = False	
-while STATUS == False:
-  USER_INPUT = input("Enter a car type: ")
-  if USER_INPUT in CARS:
-    print("You guessed the car!")
-    STATUS=True
-  else:
-    print("You have not guessed the car!")
+def printFibonacciNumbers(n): 
+      
+    f1 = 0
+    f2 = 1
+    if (n < 1): 
+        return
+    for x in range(0, n): 
+        print(f2, end = " ") 
+        next = f1 + f2 
+        f1 = f2 
+        f2 = next
