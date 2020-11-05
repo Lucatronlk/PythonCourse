@@ -46,3 +46,6 @@ class PremiumEmailUser(EmailUser):
 
   def _delete_old_emails(self):
     return
+  
+  def mod (sefl):
+    return
