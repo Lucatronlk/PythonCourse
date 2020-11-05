@@ -1,4 +1,4 @@
-#1   Are the following if statements True or False:
+# 1   Are the following if statements True or False:
 #    a. if True and False: --> FALSE
 if True and False:
     print("it is false'")
@@ -6,15 +6,14 @@ else:
     print('we are in else')
 
 #    b. if False or True: --> TRUE
-if False or True: 
+if False or True:
     print('this will always be true')
 else:
     print('nu o sa ajunga niciodata')
 
-
 #    c. if 10 >= 10 and 67 > 66: --> TRUE
 
-x = 10 >= 10 and 67 > 66 
+x = 10 >= 10 and 67 > 66
 print('ex c = ')
 print(x)
 
@@ -43,7 +42,7 @@ h = not True and not False
 print(h)
 
 #    i. if not True or True: --> TRUE
- 
+
 i = not True or True
 print(i)
 
@@ -52,7 +51,7 @@ print(i)
 j = False and not False
 print(j)
 
-#2. What values should x,y have so the following if statements are True? What about False?
+# 2. What values should x,y have so the following if statements are True? What about False?
 #    a. if x > 6 and x < 12:  -->  TRUE: 7 > 6 and 7 < 12   | FALSE: 13 > 6 and 13 < 12
 
 x = 7
@@ -65,19 +64,19 @@ print(a)
 
 #    b. if x > 10 or y > 10:  -->  TRUE: 11 > 10 or 9 > 10  | FALSE: 9 > 10 or 8 > 10
 
-x=11
-y=9
+x = 11
+y = 9
 b = x > 10 or y > 10
 print(b)
 
-x=9
-y=8
+x = 9
+y = 8
 b = x > 10 or y > 10
 print(b)
 
 #    c. if x < 9 or True:     -->  TRUE: 9 < 9 or True      | FALSE: Cannot be false because one value is true 
 
-x = 9 
+x = 9
 c = x < 9 or True
 print(c)
 
@@ -113,7 +112,6 @@ x = 10
 g = x > 10 or x < 10
 print(g)
 
-
 #    h. if x > 12 and x < 18 or y > 4 and not y < 89:  -->    TRUE:  13 > 12 and 13 < 18 or 90 > 4 and not 90 < 89 | FALSE: 11 > 12 and 11 < 18 or 3 > 4 and 3 < 89
 
 
@@ -122,18 +120,16 @@ y = 90
 h = x > 12 and x < 18 or y > 4 and not y < 89
 print(h)
 
-
 x = 11
 y = 3
 h = x > 12 and x < 18 or y > 4 and not y < 89
 print(h)
 
-
-#3 Exercises with lists
+# 3 Exercises with lists
 list1 = [1, 3, 45, -7, 89, 1, 12, 3, 3, 1]
 list2 = ["a", "cd", "b", "b", "f", "oj", "Zz"]
 list3 = [1, 2, "a", 34, "bgh", "#"]
-    
+
 #    a. eliminate all elements from list3
 
 list3.clear()
@@ -141,7 +137,7 @@ print(list3)
 
 #    b. eliminate all 3 from list1
 
-#list1.remove(3)
+# list1.remove(3)
 while 3 in list1:
     list1.remove(3)
 print(list1)
@@ -164,7 +160,7 @@ print(list3)
 
 n = 3
 
-res = list2[: len(list2) - n ]
+res = list2[: len(list2) - n]
 
 print(res)
 
@@ -172,26 +168,23 @@ list3.pop()
 
 m = 2
 
-res_2 = list1[: len(list1) - m ]
+res_2 = list1[: len(list1) - m]
 print(res_2)
 
-
-
-i = 3 
+i = 3
 print(list2)
 while i > 0:
     list2.pop()
-    i -=1
+    i -= 1
 print(list2)
 
-list1 = list[:-2] # scoate ultimele 3
+list1 = list[:-2]  # scoate ultimele 3
 
-
-#g how many b values are in list 
+# g how many b values are in list
 
 print(list2.count('b'))
 
-#4. Exercises with dictionaries
+# 4. Exercises with dictionaries
 dict1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 'A'}
 #    a. remove last element
 
@@ -213,9 +206,9 @@ for key, value in dict1.items():
 
 for key in keys_to_be_removed:
     dict1.pop(key)
-print(dict1)    
+print(dict1)
 
-dict1 = {key : val for key, val in dict1.items() if not (isinstance(val, int) and (val > 2))}
+dict1 = {key: val for key, val in dict1.items() if not (isinstance(val, int) and (val > 2))}
 print(dict1)
 
 #    d. print all the values remaining
@@ -228,8 +221,7 @@ dict1.clear()
 
 print(dict1)
 
-
-# 5. Make a "piatra, foarfece, hartie" game. 
+# 5. Make a "piatra, foarfece, hartie" game.
 #    If the user types 'stop', even with whitespaces or some uppercase letters, the game stops.
 #    The user needs to input "piatra", "foarfece" or "hartie". 
 #    If he writes something else, inform him on the rules of the game.
@@ -256,9 +248,6 @@ while True:
         break
     elif user_guess != "hartie" and user_guess != "foarfeca" and user_guess != "piatra":
         print("Please choose: Piatra, Foarfeca or Hartie")
-        
-
-
 
 # 6. Make a game in which the user has to guess a number between 100 and 199.
 #    If the user types 'stop', even with whitespaces or some uppercase letters, the game stops.
@@ -266,26 +255,25 @@ while True:
 #    If the user does not enter a number, inform him.
 
 
+import random
 
-import random 
 list_num = []
 i = 100
 
 while i <= 199:
     list_num.append(i)
-    i+=1
+    i += 1
 
 print(list_num)
 print("Choose a number between 100-109")
 
-
-while True: 
+while True:
     guess_num = input("Give a number between 100 and 199: ")
     guess_num = guess_num.strip()
     guess_num = guess_num.upper()
     number = random.choice(list_num)
     if guess_num == number:
-        print ("Felicitari ai ghicit numarul")
+        print("Felicitari ai ghicit numarul")
         break
     elif guess_num == "STOP":
         print("GAME OVER")
@@ -293,7 +281,7 @@ while True:
     elif int(guess_num) < 100 or int(guess_num) > 199:
         print("Numarul ales nu este intre 100 si 199")
     elif guess_num != number:
-        print (" Din pacate nu ai ghicit numberu " + "Numarul a fost " + str(number))
+        print(" Din pacate nu ai ghicit numberu " + "Numarul a fost " + str(number))
     else:
         print('Va rog alegeti un numar')
 
@@ -301,23 +289,22 @@ while True:
 list = []
 i = 100
 while i < 199:
-  list.append(i)
-  i += 1
+    list.append(i)
+    i += 1
 
 import random
+
 computer_guess = random.choice(list)
 
 x = input('Guess a number between 100 and 199\n')
 if x.isdigit():
-  int_x = int(x)
-  if int_x > 100 and int_x < 199:
-    if computer_guess == x:
-      print('you won')
+    int_x = int(x)
+    if int_x > 100 and int_x < 199:
+        if computer_guess == x:
+            print('you won')
+        else:
+            print('you lost, computer chose ' + str(computer_guess))
     else:
-      print('you lost, computer chose ' + str(computer_guess))
-  else:
-    print('please give a number beween 100 and 199')
+        print('please give a number beween 100 and 199')
 else:
-  print('please give a number')
-
-
+    print('please give a number')

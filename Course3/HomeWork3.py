@@ -16,7 +16,6 @@ print(count)
 
 print(list.count(8))
 
-
 # Generati primele 50 de numere in ordine descrescatoare
 
 list_2 = []
@@ -28,7 +27,6 @@ while i < 50:
 list_2.sort(reverse=True)
 
 print(list_2)
-
 
 i = 50
 list_t = []
@@ -53,7 +51,6 @@ for letter in list_3:
 
 print(new_list)
 
-
 # 4 Generati toate numerele intre 123 si 231
 
 list_4 = []
@@ -64,7 +61,6 @@ while i < 231:
     list_4.append(i)
 
 print(list_4)
-
 
 # 5 Generati toate numerele pare intre 500 si 560
 
@@ -78,7 +74,6 @@ while i < 560:
 
 print(list_5)
 
-
 # 6 Generati toate numerele impare in ordine descrescatoare intre 999 si 901
 
 list_6 = []
@@ -89,7 +84,6 @@ while i < 999:
     if i % 2 == 1:
         list_6.append(i)
 
-
 list_6.sort(reverse=True)
 print(list_6)
 
@@ -99,7 +93,7 @@ list_rps = ['Piatra', 'Foarfeca', 'Hartie']
 print("Alege Piatra, Foarfeca sau Hartie")
 user_rps = str(input())
 
-#computer = list_rps[randint(0, 2)]
+# computer = list_rps[randint(0, 2)]
 computer = list_rps(random.choice)
 
 # set player to False
@@ -144,7 +138,6 @@ elif user_guess == "foarfeca":
     print("Ai pierdut")
 elif user_guess == "hartie":
     print("Ai castigat")
-
 
 # 8 Cereti user-ului sa introduca un numar intre 1 si 10. Daca nu respecta cerinta, printati un mesaj de eroare
 
@@ -197,7 +190,6 @@ list_sum = [10, 99, 876, 23, -40, 78, -2000]
 
 print(sum(list_sum))
 
-
 # 11 Intrebati-l pe user parola si ziceti daca e slaba, moderata sau puternica. Daca e sub 10 caractere e slaba, iar peste 20 puternica
 
 
@@ -207,7 +199,6 @@ password = str(input())
 
 
 def password(user_password):
-
     if len(password) < 10:
         print("The password is wery week, you can consider changing it ")
     elif len(password) < 20:
