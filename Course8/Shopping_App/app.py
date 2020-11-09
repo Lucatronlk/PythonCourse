@@ -4,56 +4,29 @@
 #   import sys
 #   sys.argv # a list with all the params from the terminal
 
-#Procedural 
 from os import close
 import sys
-import os 
+import os
+from user import User
+
+
 
 arguments = sys.argv[1:]
 
-def  get_username_file(username):
-    return 'user_' + username
-
-def does_file_exists(file_path):
-    try:
-        file = open(file_path)
-        file.close
-        return True
-    except FileNotFoundError:
-        return False       
-
 if arguments[0] == 'user' and arguments[1] == 'add':
-    try:
-        file = open(get_username_file(arguments[2]))
-        file.close()
-        print('The username already exists')
-    except:    
-        file = open(get_username_file(arguments[2]), 'w' )
-        file.close()
-        print('User sucesfully created')
+    new_user = User(arguments[2]) # we create an object User
+    new_user.save() #we save it into the system
 
 
 if arguments[0] == 'user' and arguments[1] == 'remove':
-    try:
-        os.remove(get_username_file(arguments[2]))
-    except FileNotFoundError:
-        print('The user does not exist')
-
+    user = User(arguments[2])
+    user.remove()
 
 if arguments[0] == 'user' and arguments[1] == 'edit':
-    old_username = arguments[2]
-    new_username = arguments[3]
-
-    if does_file_exists(get_username_file(old_username)):
-        if not does_file_exists(get_username_file(new_username)):
-            file = open(get_username_file(new_username), 'w')
-            file.close()
-            os.remove(get_username_file(old_username))
-        else:
-            print('New Username already exists') 
-    else:
-        print('User does not exists')           
-
+  user = User(arguments[2])
+  user.remove()
+  new_user = user.rename(arguments[3])
+  new_user.save()
     
 
 
