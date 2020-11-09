@@ -1,4 +1,4 @@
-from email import EmailUser
+from Course7_email import EmailUser
 
 user1 = EmailUser("alexandru.luca@gmail.com", "Luca Alexandru")
 print(user1.get_username())

@@ -193,3 +193,13 @@ def tax_car(tax):
 engine = 2.5
 
 print(tax_car(engine))
+
+
+count = 0 
+for i in range(0,110): 
+    for j in str(i): 
+        if j=='9': 
+            count += 1 
+print(count)
+
+    
