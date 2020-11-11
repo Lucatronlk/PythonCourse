@@ -198,8 +198,18 @@ print(tax_car(engine))
 count = 0 
 for i in range(0,110): 
     for j in str(i): 
-        if j=='9': 
+        if j=='1': 
             count += 1 
 print(count)
 
+
+correct_answer = "Tesla"
+input_answer = input("Please guess the company of the electric car:\n")
+
+def car_guess():
     
+  if correct_answer == input_answer:
+  	print("Correct")
+  else:
+  	car_guess()
+ 
