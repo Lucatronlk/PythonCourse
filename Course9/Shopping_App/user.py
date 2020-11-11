@@ -15,7 +15,7 @@ class User:
         # try to open a file, succes if it already exists
      file = open(file_path)
      file.close()
-     print('User already exist')
+     return 'User already exist'
     except:
        # if the file does not exist and we can`t open it we create it
       file = open(file_path, 'w')
