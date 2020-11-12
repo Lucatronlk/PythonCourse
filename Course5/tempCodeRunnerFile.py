@@ -1,25 +1,29 @@
-print("Alegeti una din urmatoarele: Piatra, Foarfeca, Hartie")
-# user_guess = input()
-# user_guess = user_guess.lower()
-# user_guess = user_guess.strip()
-# computer_guess = "piatra"
+import random
+
+list_num = []
+i = 100
+
+while i <= 199:
+    list_num.append(i)
+    i += 1
+
+print(list_num)
+print("Choose a number between 100-109")
 
 while True:
-    user_guess = input()
-    user_guess = user_guess.lower()
-    user_guess = user_guess.strip()
-    computer_guess = "piatra"
-    if user_guess == "piatra":
-        print("Egal")
+    guess_num = input("Give a number between 100 and 199: ")
+    guess_num = guess_num.strip()
+    guess_num = guess_num.upper()
+    number = random.choice(list_num)
+    if guess_num == number:
+        print("Felicitari ai ghicit numarul")
         break
-    elif user_guess == "foarfeca":
-        print("Ai pierdut")
+    elif guess_num == "STOP":
+        print("GAME OVER")
         break
-    elif user_guess == "hartie":
-        print("Ai castigat")
-        break
-    elif user_guess == "stop":
-        print("Game over")
-        break
-    elif user_guess != "hartie" and user_guess != "foarfeca" and user_guess != "piatra":
-        print("Please choose: Piatra, Foarfeca or Hartie")
+    elif int(guess_num) < 100 or int(guess_num) > 199:
+        print("Numarul ales nu este intre 100 si 199")
+    elif guess_num != number:
+        print(" Din pacate nu ai ghicit numberu " + "Numarul a fost " + str(number))
+    else:
+        print('Va rog alegeti un numar')
