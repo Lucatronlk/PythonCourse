@@ -1,18 +1,13 @@
-input_answer = int(input("Please write the size of Motorbike's engine:\n"))      
-def motorbike_tax(tax):
- 
-  if input_answer < 400: 
-  	 print("The cost is 50 euro")
-  elif input_answer > 400 and input_answer < 800: 
-  	 print("The cost is 100 euro")
-  elif input_answer > 800 and input_answer < 1200: 
-  	 print("The cost is 150 euro")   
-  elif input_answer > 1200 and input_answer < 1600: 
-  	 print("The cost is 200 euro")     
-  elif input_answer > 1600 and input_answer < 2000: 
-  	 print("The cost is 400 euro")   
-  elif input_answer > 2000 and input_answer < 2300: 
-  	 print("The cost is 450 euro")
-
-
-print(motorbike_tax(input_answer))           
+def taxaMotor(capacitate):
+     if capacitate < 1000:                                           
+        return "Taxa este 100 ron"
+     elif  capacitate > 1000 and capacitate < 2000:
+        return "Taxa este 400 ron"
+     elif capacitate > 2000 and capacitate < 4000:
+        return "Taxa este 10000 ron"
+     elif capacitate > 4000 and capacitate < 6000:
+        return "Taxa este 15000 ron"
+     else:
+        return "Taxa este 25000 ron"
+    
+print(taxaMotor(2000))
