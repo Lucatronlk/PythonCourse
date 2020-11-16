@@ -16,7 +16,7 @@ class TestClient(unittest.TestCase):
         # set up
         client = Client('user1')
         #execition
-        response = Client.add_money(700)
+        response = client.add_money(700)
         #assertion
         self.assertEqual(False, response)
         self.assertEqual(0, client.money)
