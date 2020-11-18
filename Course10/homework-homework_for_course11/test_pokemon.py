@@ -6,7 +6,7 @@ from unittest.mock import patch
 #creat a subclass of API response
 class OurResponse(requests.Response):
     def json(self):
-        return {'species': {'name:' 'pikachu'}}
+        return {'species': {'name': 'pikachu'}}
 
 
 class TestPokemon(unittest.TestCase):
