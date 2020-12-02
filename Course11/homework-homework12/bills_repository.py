@@ -21,12 +21,12 @@ class ConsumptionRepository:
     def make_consumption(self, units, name):
         units = int(units)
         if units < 100:
-            return ConsumptionBelow100(units, name).get_price()
+            return ConsumptionBelow100(units, name)
         if units < 200:
-            return ConsumptionBelow200(units, name).get_price()
+            return ConsumptionBelow200(units, name)
         if units < 300:
-            return ConsumptionBelow300(units, name).get_price()
-        return ConsumptionAbove300(units, name).get_price()
+            return ConsumptionBelow300(units, name)
+        return ConsumptionAbove300(units, name)
 
     def read_from_file(self):
         # create a file object ( handler )

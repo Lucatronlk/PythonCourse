@@ -15,6 +15,7 @@ class Pokemon:
   def get_by_number(self, number):
      response = requests.get("https://pokeapi.co/api/v2/pokemon/" + str(number))
      content = response.json()
+     print(content)
      return content['species']['name']
 
 # pokemon = Pokemon()

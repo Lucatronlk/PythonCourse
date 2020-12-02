@@ -6,7 +6,7 @@ class TestBill(unittest.TestCase):
     def test_bill(self):
         repo = ConsumptionRepository()
         consumptions = repo.get()
-
+        print (consumptions)
         actual_message = compute_price(consumptions[0])
         self.assertEqual('Billy has to pay 4.8$', actual_message)
 
