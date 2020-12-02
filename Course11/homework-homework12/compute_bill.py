@@ -1,27 +1,15 @@
-from bills_repository import BillRepository
-from consumption import ConsumptionBelow100, ConsumptionBelow200, ConsumptionBelow300, ConsumptionAbove300
+from bills_repository import ConsumptionRepository
 
 
-def compute_bill(units):
-
-    if units < 100:
-        return ConsumptionBelow100(units).get_price()
-    if units < 200:
-        return ConsumptionBelow200(units).get_price()
-    if units < 300:
-        return ConsumptionBelow300(units).get_price()
-    return ConsumptionAbove300(units).get_price()
 
 
 #creat an object repository
-repo = BillRepository()
+repo = ConsumptionRepository()
 bills = repo.get()
 
 
-def compute_price(bill):
-    consumption = int(bill.consumption)
-    price = compute_bill(consumption)
-    return bill.name + ' has to pay ' + str(price) + '$'
+def compute_price(consumption):
+    return consumption.name + ' has to pay ' + str(consumption.get_price()) + '$'
 
 
 #print(bills)

@@ -1,7 +1,8 @@
 class Consumption:
-    def __init__(self, units):
+    def __init__(self, units, name):
         # save the value to the object
         self.units = units
+        self.name = name
 
 class ConsumptionBelow100(Consumption):
 
@@ -22,4 +23,4 @@ class ConsumptionBelow300(Consumption):
 
 class ConsumptionAbove300(Consumption):
     def get_price(self):
-        return 6 + 8 + 9 + 0.01 * (self.units - 300)
+        return 6 + 8 + 9 + 0.1 * (self.units - 300)
