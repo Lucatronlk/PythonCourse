@@ -17,10 +17,7 @@ class User:
       self.register_to_users_who_voted()
 
   def user_already_voted(self):
-      # create a File object, to read users.txt
-      read_users = open('users.txt')
-      # read the file with readlines(), receive a list with the strings frm each line
-      user_who_voted = read_users.readlines()
+      user_who_voted = self.read_file()
       has_user_already_voted = False
       # print(user_who_voted)
       # check if the user already voted
@@ -28,6 +25,15 @@ class User:
           print('User ' + self.name + ' already voted')
           has_user_already_voted = True
       return has_user_already_voted
+
+  def read_file(self):
+      # create a File object, to read users.txt
+      read_users = open('users.txt')
+      # read the file with readlines(), receive a list with the strings frm each line
+      user_who_voted = read_users.readlines()
+      # close the file
+      read_users.close()
+      return user_who_voted
 
   def register_the_vote(self, party_id):
       # create a File Object, to append the votes ( write at the end )
