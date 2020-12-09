@@ -30,5 +30,8 @@ class TestVoting(unittest.TestCase):
         write_file.assert_called_once_with("1\n")
 
 
+
+
+
 if __name__ == '__main__':
     unittest.main()
