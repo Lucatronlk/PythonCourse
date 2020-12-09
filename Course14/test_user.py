@@ -20,6 +20,14 @@ class TestVoting(unittest.TestCase):
         has_voted = user.user_already_voted()
         #assertion
         self.assertTrue(has_voted)
+    @mock.patch('voting.User.write_file')
+    def test_vote_was_registered(self, write_file):
+        #setup
+        #execution
+        user = User('name2')
+        user.vote(1)
+        #assertion
+        write_file.assert_called_once_with("1\n")
 
 
 if __name__ == '__main__':

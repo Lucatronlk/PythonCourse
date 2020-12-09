@@ -35,13 +35,18 @@ class User:
       read_users.close()
       return user_who_voted
 
-  def register_the_vote(self, party_id):
+  def write_file(self, vote):
       # create a File Object, to append the votes ( write at the end )
       votes_file = open('votes.txt', 'a')
       # convert party_id to stringA
-      votes_file.write(str(party_id) + "\n")
+      votes_file.write(vote)
       # close the file
       votes_file.close()
+
+  def register_the_vote(self, party_id):
+      # convert party_id to string
+      self.write_file(str(party_id) + "\n")
+
 
   def register_to_users_who_voted(self):
       # create a File Objecty to write the users who voted
