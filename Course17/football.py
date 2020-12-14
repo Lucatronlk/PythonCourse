@@ -20,7 +20,7 @@ class Goalkeeper(Player):
         #save value to object
         self.reflexes = reflexes
         self.communication = communication
-        super().__init__(passing,stamina)
+        super().__init__(passing, stamina)
 
 
 class Defender(Player):
@@ -40,7 +40,7 @@ class Midfielder(Player):
         #call the parent constructor
         super().__init__(passing, stamina)
 
-class Striker:
+class Striker(Player):
     def __init__(self, dribbling, finishing, passing, stamina ):
         self.dribbling = dribbling
         self.finishing = finishing
@@ -53,7 +53,7 @@ class Team:
     def __init__(self, goalkeeper, defenders, midfielders, strikers):
         self.goalkeeper = goalkeeper
         self.defenders = defenders
-        self.midfielders - midfielders
+        self.midfielders = midfielders
         self.strikers = strikers
 
 gk1 = Goalkeeper(8,5,3,2)
