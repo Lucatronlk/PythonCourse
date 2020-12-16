@@ -43,3 +43,7 @@ class ConsumptionRepository:
 repo = ConsumptionRepository()
 bills = repo.get()
 print(bills)
+
+
+
+

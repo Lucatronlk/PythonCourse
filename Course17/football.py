@@ -34,7 +34,7 @@ class Goalkeeper(Defensive_Player):
         self.aerial_reach = aerial_reach
 
         # call the parent constructor - Player
-        super().__init__(communication. concentration, concentration, passing, stamina, strength)
+        super().__init__(communication, concentration, passing, stamina, strength)
         # call the parent constructor - DefensivePlayer
         #Defensive_Player.__init__(self, communication, concentration)
 
@@ -48,7 +48,7 @@ class Defender(Defensive_Player):
 
 
         #call the parent constructor - Player
-        super().__init__(communication, concentration, concentration, passing, stamina, strength)
+        super().__init__(communication, concentration, passing, stamina, strength)
         # call the parent constructor - DefensivePlayer
         #Defensive_Player.__init__(self, communication, concentration)
 
