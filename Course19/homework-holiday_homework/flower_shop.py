@@ -64,6 +64,20 @@ class FlowerShop:
         bouquet = Bouquet(flowers)
         return bouquet
 
+    def add_to_inventory(self, flowers):
+        #try to open the file, if it exists we read from it
+        try:
+          file = open('invetory.txt')
+          inventory = file.read()
+          #close the file
+          file.close()
+        except:
+           #if the file does not exist, we create it
+          file = open('inventory.txt', 'w')
+          file.close
+          inventory = []
+        print(inventory)
+
 
 shop = FlowerShop()
 order = shop.place_order([Tulip('red', 6), Orchid('white', 3), Orchid('white', 4)])
