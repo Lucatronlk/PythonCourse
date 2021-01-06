@@ -49,10 +49,11 @@ class Bouquet:
     def get_smell(self):
          smells = {}
          for one_flower in self.flowers:
-             if one_flower.smell in smells:
-               smells[one_flower.smell] += 1
-             else:
-                 smells[one_flower.smell] = 1
+             smells[one_flower.smell] = smells[one_flower.smell] + 1 if one_flower.smell in smells else 1
+             # if one_flower.smell in smells:
+             #   smells[one_flower.smell] += 1
+             # else:
+             #     smells[one_flower.smell] = 1
          return smells
 
 
