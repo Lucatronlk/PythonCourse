@@ -13,6 +13,6 @@ class Broker:
         for one_stock in self.stocks:
             print(date.today())
             string_today = date.today().strftime("%m/%d/%y")
-            dict[one_stock.name][string_today] = one_stock.get_price
+            dict[one_stock.name][string_today] = one_stock.get_price()
         stocks_file.write(dict)
 

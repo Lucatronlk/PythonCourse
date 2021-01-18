@@ -1,9 +1,9 @@
 from yfinance_wrapper import YahooFinanceStock
 
 class Stock:
-    def __init__(self,name):
-        self.name = name
-        self.data = YahooFinanceStock(name)
+    def __init__(self,data: YahooFinanceStock):
+         self.data = data
+        #self.data = YahooFinanceStock(name)
 
 
     def get_sector(self):
