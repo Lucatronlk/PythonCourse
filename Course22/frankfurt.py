@@ -6,5 +6,5 @@ url = "http://172.105.87.133:3160/file"
 # print(response)
 # print(response.content)
 
-response = requests.post(url, headers={'Content-type': 'application/json', 'fie_name': 'fisierul_lucatronlk'})
+response = requests.delete(url, headers={'Content-type': 'application/json', 'file_name': 'fisierul_lucatronlk'})
 print(response)
