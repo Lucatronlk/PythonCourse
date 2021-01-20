@@ -1,17 +1,25 @@
 import requests
 
 
-url = 'http://localhost:8000/hello'
-response = requests.get(url)
+# url = 'http://localhost:8000/hello'
+# response = requests.get(url)
+#
+# print(response)
+# print(response.content)
+#
+#
+# url_post = "http://localhost:8000/file"
+#
+# data = {'file_name': 'myfile_luca'}
+# headers = {'file_name': 'fisier_luca'}
+# response = requests.post(url_post, data, headers=headers)
 
-print(response)
-print(response.content)
+
+# url_put = "http://localhost:8000/file"
+# headers = {'file_name': 'fisier_luca', 'content': 'hello'}
+# requests.put(url_put, headers=headers)
 
 
-url_post = "http://localhost:8000/file"
-
-data = {'file_name': 'myfile_luca'}
+url_delete = "http://localhost:8000/file"
 headers = {'file_name': 'fisier_luca'}
-response = requests.post(url_post, data, headers=headers)
-
-
+requests.delete(url_delete, headers=headers)
