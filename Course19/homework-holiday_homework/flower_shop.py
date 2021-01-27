@@ -89,7 +89,7 @@ class FlowerShop:
 
 
 shop = FlowerShop()
-print(shop.get_invetory())
-# shop.add_to_inventory([Tulip('red', 6), Orchid('white', 3), Orchid('white', 4)])
+#print(shop.get_invetory())
+shop.add_to_inventory([Tulip('red', 6), Orchid('white', 3), Orchid('white', 4)])
 # order = shop.place_order([Tulip('red', 6), Orchid('white', 3), Orchid('white', 4)])
 # print(order.get_smell())
