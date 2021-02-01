@@ -1,5 +1,5 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
-from flower_shop import FlowerShop
+from flower_shop import FlowerShop, Tulip
 import json
 
 class FlowerRequestHandler(BaseHTTPRequestHandler):
@@ -23,9 +23,16 @@ class FlowerRequestHandler(BaseHTTPRequestHandler):
 
   def do_POST(self):
       print("Am ajuns in POST")
-      length = self.headers.get('content-legth')
+      #extract the key content-length frm headers
+      length = self.headers.get('content-length')
       print(length)
-      print(self.rfile.read(int(length)))
+      #read the request data
+      data = self.rfile.read(int(length))
+      decoded_data = json.loads(data.decode())
+      if decoded_data['type'] == 'Tulip':
+          flowers = [Tulip(decoded_data['color'], decoded_data['number'])]
+      FlowerShop().add_to_inventory(flowers)
+      print(decoded_data['type'])
       self.prepare_response()
 
 
