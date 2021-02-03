@@ -19,7 +19,7 @@ class TaskRepository:
      #print(saved_info)
      tasks = []
      for task_info in saved_info:
-       new_task = Task(task_info['name'], task_info['type'], task_info['deadline'], task_info['difficulty'])
+       new_task =
        tasks.append(new_task)
 
      return tasks
