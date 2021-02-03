@@ -2,8 +2,8 @@ import json
 import unittest
 import os
 
-from PythonCourse.Course27_TODO_app.repository import TaskRepository
-from PythonCourse.Course27_TODO_app.task import Task
+from repository import TaskRepository
+from task import Task
 
 
 class TaskRepositoryTest(unittest.TestCase):
@@ -12,6 +12,12 @@ class TaskRepositoryTest(unittest.TestCase):
         self.repo = TaskRepository()
         self.repo.file_name = 'tasks_test.json'
         self.json_tasks = [{"name": "cook food", "type": "eating", "deadline": 'Tomorrow', "difficulty": 1}]
+
+
+    def tearDown(self):
+
+        # cleanup
+        os.remove(self.repo.file_name)
 
     def test_add(self):
 
@@ -25,9 +31,6 @@ class TaskRepositoryTest(unittest.TestCase):
         file.close()
         self.assertEqual(self.json_tasks, json.loads(content))
 
-        #clean up
-
-        os.remove('tasks_test.json')
 
     def test_get(self):
         # set up the test
@@ -37,11 +40,9 @@ class TaskRepositoryTest(unittest.TestCase):
         # exectution
         tasks = self.repo.get()
         # assertion
-        self.assertEqual([Task("cook food", "eating", "Tomorrow", 1)].__dict__, tasks[0].__dict__)
+        self.assertEqual(Task("cook food", "eating", "Tomorrow", 1).__dict__, tasks[0].__dict__)
 
-        # cleanup
 
-        os.remove(self.repo.file_name)
 
 
 

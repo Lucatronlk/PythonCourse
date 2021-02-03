@@ -3,18 +3,19 @@ from typing import List
 from task import Task
 import os
 import json
+from mapper import TaskMapper
 
 
 class TaskRepository:
   file_name = 'tasks.json'
   def add(self, task: Task):
-    list_of_tasks = self.read_list_of_tasks()
-    json_list = self.add_to_list(list_of_tasks, task)
-    self.write_to_file(json_list)
+    list_of_tasks = self.__read_from_file()
+    json_list = self.__add_task_info(list_of_tasks, task)
+    self.__write_to_file(json_list)
 
 
   def get(self) -> List[Task]:
-     saved_info = self.read_list_of_tasks()
+     saved_info = self.__read_from_file()
      #print(saved_info)
      tasks = []
      for task_info in saved_info:
@@ -24,26 +25,21 @@ class TaskRepository:
      return tasks
 
 
-  def add_to_list(self, list_of_tasks, task):
+  def __add_task_info(self, list_of_tasks, task):
     # extract the info from the Task object
-    list_of_tasks.append({
-      'name': task.name,
-      'type': task.task_type,
-      'deadline': task.deadline,
-      'difficulty': task.difficulty,
-    })
+    list_of_tasks.append(TaskMapper.to_dict())
     # create a JSON
     file_content = json.dumps(list_of_tasks)
     return file_content
 
-  def write_to_file(self, file_content):
+  def __write_to_file(self, file_content):
     # open the file for writing, create it if it does not exist
     file = open(self.file_name, 'w')
     # save it to the file
     file.write(file_content)
     file.close()
 
-  def read_list_of_tasks(self):
+  def __read_from_file(self):
     # check if file was created
     if os.path.exists(self.file_name):
       # open the file for read
