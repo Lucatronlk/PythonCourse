@@ -16,17 +16,13 @@ class TaskRepository:
 
   def get(self) -> List[Task]:
      saved_info = self.__read_from_file()
-     #print(saved_info)
-     tasks = []
-     for task_info in saved_info:
-       tasks.append(TaskMapper.to_object())
-
+     tasks = [TaskMapper.to_object(info) for info in saved_info]
      return tasks
 
 
   def __add_task_info(self, list_of_tasks, task):
     # extract the info from the Task object
-    list_of_tasks.append(TaskMapper.to_dict())
+    list_of_tasks.append(TaskMapper.to_dict(task))
     # create a JSON
     file_content = json.dumps(list_of_tasks)
     return file_content
