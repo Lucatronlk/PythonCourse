@@ -19,8 +19,7 @@ class TaskRepository:
      #print(saved_info)
      tasks = []
      for task_info in saved_info:
-       new_task =
-       tasks.append(new_task)
+       tasks.append(TaskMapper.to_object())
 
      return tasks
 
