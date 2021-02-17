@@ -2,6 +2,8 @@ import flask
 # '..' == the above folder
 from task import Task
 from repository import TaskRepository
+from database.task_store_sql import TaskStoreSql
+from database.task_store_file import TaskStoreFile
 
 server = flask.Flask(__name__)
 
@@ -18,8 +20,8 @@ def menu():
 
 #define what to show when accesing the server/
 @server.route('/list')
-def main():
-    repo = TaskRepository()
+def list():
+    repo = TaskRepository(TaskStoreSql())
     tasks = repo.get()
     print('will show an HTML page')
     paragraph = 'Content of our paragraph'
@@ -38,7 +40,7 @@ def new():
 
 
 
-        repo = TaskRepository()
+        repo = TaskRepository(TaskStoreSql())
         repo.add(new_task)
         return flask.redirect(flask.url_for('main'))
 

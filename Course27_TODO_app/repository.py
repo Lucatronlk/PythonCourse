@@ -17,10 +17,11 @@ class TaskRepository:
 
 
   def add(self, task: Task):
-    list_of_tasks = self.__read_from_file()
-    json_list = self.__add_task_info(list_of_tasks, task)
-    self.__write_to_file(json_list)
-
+    #list_of_tasks = self.task_store.get_all()
+    # json_list = self.__add_task_info(list_of_tasks, task)
+    # self.__write_to_file(json_list)
+    task_dict = TaskMapper.to_dict(task)
+    self.task_store.add(task_dict)
 
   def get(self) -> List[Task]:
      saved_info = self.task_store.get_all()
@@ -29,7 +30,7 @@ class TaskRepository:
 
 
   def delete(self, task:Task):
-    list_of_tasks = self.__read_from_file()
+    list_of_tasks = self.task_store.get_all()
     tasks = [x for x in list_of_tasks if x['name'] != task.name]
     self.__write_to_file(tasks)
 

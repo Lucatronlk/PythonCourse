@@ -7,7 +7,9 @@ class TaskStore(ABC):
     def get_all(self) -> List[dict]:
         pass
 
-
+    @abstractmethod
+    def add(self, task_info: dict):
+        pass
 
 
 
