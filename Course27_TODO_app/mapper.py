@@ -16,6 +16,6 @@ class TaskMapper:
     def to_object(task_info: dict) -> Task :
         return Task(
             task_info['name'],
-            task_info['type'],
-            task_info['deadline'],
-            task_info['difficulty'])
+            task_info['type'])
+            # task_info['deadline'],
+            # task_info['difficulty'])
