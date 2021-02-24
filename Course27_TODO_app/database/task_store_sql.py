@@ -25,9 +25,26 @@ class TaskStoreSql(TaskStore):
         connection = self.__get_connection()
         cursor = connection.cursor()
         # on the cursor object  we execute our commands
-        cursor.execute("INSERT INTO tasks (name,type) VALUES ('"
-                       + task_info['name'] + "', '" + task_info['type'] + "')")
+        # command = "INSERT INTO tasks (name,type) VALUES ('" + task_info['name'] + "', '" + task_info['type'] + "')"
+        #command = "INSERT INTO tasks (name,type) VALUES ('%s', '%s')" \
+        #          % (task_info['name'], task_info['type'])
+        name = task_info['name']
+        task_type = task_info['type']
+        command = f"INSERT INTO tasks (name,type) VALUES ('{name}','{task_type}')"
+
+        cursor.execute(command)
 
         # save and close connection
         connection.commit()
         connection.close()
+
+    def delete(self, task_name: str):
+        # the variable after as takes the value form the function on the left
+        # with calls connections.close() automatically even if errors
+        with self.__get_connection() as connection:
+            cursor = connection.cursor()
+            command = f"DELETE FROM tasks WHERE name '{task_name}'"
+            cursor.execute(command)
+            connection.commit()
+
+#

@@ -42,5 +42,5 @@ def new():
 
         repo = TaskRepository(TaskStoreSql())
         repo.add(new_task)
-        return flask.redirect(flask.url_for('main'))
+        return flask.redirect(flask.url_for('list'))
 
