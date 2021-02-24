@@ -15,7 +15,11 @@
 <h1>List of tasks:</h1>
 <ul>
  {%  for one_task in tasks  %}
-  <li>{{ one_task.name }}</li>
+    <li>{{ one_task.name }}
+        <form method="delete" action="{{ url_for(task, name=one_task.name.replace(' ', '_')) }}">
+          <button type="button" class="btn btn-danger">Delete</button></form>
+    </li>
+
     {% endfor %}
 </ul>
 </body>
